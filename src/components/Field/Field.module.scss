@@ -1,0 +1,57 @@
+@import "../../global/variables";
+
+.Field{
+    width: 100%;
+    padding: 1rem 0;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Icon{
+        display: none;
+        width: 2rem;
+        height: 2rem;
+        font-size: 2rem;
+        margin-right: 0.5rem;
+        text-align: center;
+        @media (orientation: landscape){
+            display: block;
+        }
+    }
+    .Invalid{
+        background-color: #ac5a5a;
+            &::placeholder{
+                color: whitesmoke;
+            }
+    }
+    input{
+        width: 80%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        color: #2d2b3b;
+        background-color: $light_color;
+        transition: .3s;
+        &::placeholder{
+            color: #2d2b3bb2;
+        }
+        &:active, &:focus{
+            outline: none;
+        }
+        @media (orientation: landscape){
+            width: 40%;
+            margin-right: 2.5rem;
+        }
+    }
+    button{
+        padding: 1rem;
+        border: none;
+        font-size: 2rem;
+        color: $light-color;
+        background-color: $dark-color;
+        font-weight: bold;
+        user-select: none;
+    }
+}
+
